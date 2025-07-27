@@ -42,7 +42,7 @@ def tampilkan_struk(barang_yang_dibeli, total_belanja):
     for barang in barang_yang_dibeli:
         print(f"- {barang[0]} x {barang[2]} = {barang[1] * barang[2]}")
     print("Terima kasih telah berbelanja di Kasir Sederhana CLI!")
-    print("======================================================")
+    print("=====================================================")
 
 # Tampilkan struk belanja
 tampilkan_struk(barang_yang_dibeli, total_belanja)
