@@ -39,10 +39,12 @@ while True:
     try:
         pilihan = int(input("Pilih menu: "))
     except ValueError:
-
-nama = input("Masukkan nama kontak: ")
-nomor = input("Masukkan nomor kontak: ")
-tambah_kontak(nama, nomor)
+        print("Masukkan angka antara 1 sampai 5!")
+        continue
+    if pilihan == 1:
+        nama = input("Masukkan nama kontak: ")
+        nomor = input("Masukkan nomor kontak: ")
+        tambah_kontak(nama, nomor)
 
 nama = input("Masukkan nama kontak: ")
 lihat_kontak(nama)
