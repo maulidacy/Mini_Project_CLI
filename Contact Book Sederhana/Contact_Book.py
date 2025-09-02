@@ -17,3 +17,28 @@ def update_kontak(nama, nomor_baru):
         print(f"Kontak {nama} berhasil diperbarui.")
     else:
         print(f"Kontak {nama} tidak ditemukan.")
+
+def hapus_kontak(nama):
+    if nama in kontak:
+        del kontak[nama]
+        print(f"Kontak {nama} berhasil dihapus.")
+    else:
+        print(f"Kontak {nama} tidak ditemukan.")
+
+try:
+    tambah_kontak = input("Masukkan nama kontak: ")
+    nomor = input("Masukkan nomor kontak: ")
+    tambah_kontak(tambah_kontak, nomor)
+
+    lihat_kontak = input("Masukkan nama kontak: ")
+    lihat_kontak(lihat_kontak)
+
+    update_kontak = input("Masukkan nama kontak: ")
+    nomor_baru = input("Masukkan nomor kontak baru: ")
+    update_kontak(update_kontak, nomor_baru)
+
+    hapus_kontak = input("Masukkan nama kontak: ")
+    hapus_kontak(hapus_kontak)
+
+except Exception as e:
+    print(f"Terjadi kesalahan: {e}")
