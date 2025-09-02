@@ -10,3 +10,10 @@ def lihat_kontak(nama, nomor_baru):
     else:
         for nama, nomor in kontak.items():
             print(f"Nama: {nama}, Nomor: {nomor}")
+
+def update_kontak(nama, nomor_baru):
+    if nama in kontak:
+        kontak[nama] = nomor_baru
+        print(f"Kontak {nama} berhasil diperbarui.")
+    else:
+        print(f"Kontak {nama} tidak ditemukan.")
