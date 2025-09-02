@@ -45,16 +45,30 @@ while True:
         nama = input("Masukkan nama kontak: ")
         nomor = input("Masukkan nomor kontak: ")
         tambah_kontak(nama, nomor)
+    elif pilihan == 2:
+        if not kontak:
+            print("Daftar kontak kosong.")
+        else:
+            print("\nDaftar Kontak:")
+            print("-" * 30)
+            for nama, nomor in kontak.items():
+                print(f"Nama: {nama}, Nomor: {nomor}")
+            print("-" * 30)
+    elif pilihan == 3:
+        nama = input("Masukkan nama kontak: ")
+        nomor_baru = input("Masukkan nomor kontak baru: ")
+        update_kontak(nama, nomor_baru)
+    elif pilihan == 4:
+        nama = input("Masukkan nama kontak: ")
+        hapus_kontak(nama)
+    elif pilihan == 5:
+        print("Terima kasih telah menggunakan aplikasi ini!")
+        break
+    else:
+        print("Pilihan tidak valid. Masukkan angka 1-5.")
 
-nama = input("Masukkan nama kontak: ")
-lihat_kontak(nama)
 
-update_kontak = input("Masukkan nama kontak: ")
-nomor_baru = input("Masukkan nomor kontak baru: ")
-update_kontak(update_kontak, nomor_baru)
 
-hapus_kontak = input("Masukkan nama kontak: ")
-hapus_kontak(hapus_kontak)
 
 
 
