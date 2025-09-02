@@ -25,20 +25,17 @@ def hapus_kontak(nama):
     else:
         print(f"Kontak {nama} tidak ditemukan.")
 
-try:
-    tambah_kontak = input("Masukkan nama kontak: ")
-    nomor = input("Masukkan nomor kontak: ")
-    tambah_kontak(tambah_kontak, nomor)
 
-    lihat_kontak = input("Masukkan nama kontak: ")
-    lihat_kontak(lihat_kontak)
+nama = input("Masukkan nama kontak: ")
+nomor = input("Masukkan nomor kontak: ")
+tambah_kontak(nama, nomor)
 
-    update_kontak = input("Masukkan nama kontak: ")
-    nomor_baru = input("Masukkan nomor kontak baru: ")
-    update_kontak(update_kontak, nomor_baru)
+lihat_kontak = input("Masukkan nama kontak: ")
+lihat_kontak(lihat_kontak)
 
-    hapus_kontak = input("Masukkan nama kontak: ")
-    hapus_kontak(hapus_kontak)
+update_kontak = input("Masukkan nama kontak: ")
+nomor_baru = input("Masukkan nomor kontak baru: ")
+update_kontak(update_kontak, nomor_baru)
 
-except Exception as e:
-    print(f"Terjadi kesalahan: {e}")
+hapus_kontak = input("Masukkan nama kontak: ")
+hapus_kontak(hapus_kontak)
